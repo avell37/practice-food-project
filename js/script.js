@@ -166,8 +166,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         render() {
             const element = document.createElement('div');
+            element.classList.add('menu__item');
             element.innerHTML = `
-            <div class="menu__item">
                     <img src=${this.img} alt=${this.alt}>
                     <h3 class="menu__item-subtitle">${this.title}</h3>
                     <div class="menu__item-descr">${this.descr}</div>
@@ -175,7 +175,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="menu__item-price">
                         <div class="menu__item-cost">Цена:</div>
                         <div class="menu__item-total"><span>${this.totalCost}</span> грн/день</div>
-            </div>
             `;
             this.parent.append(element);
         }
