@@ -162,6 +162,12 @@ document.addEventListener('DOMContentLoaded', () => {
             this.descr = descr;
             this.totalCost = totalCost;
             this.parent = document.querySelector(parentSelector);
+            this.transfer = 27;
+            this.changeToUAH();
+        }
+
+        changeToUAH() {
+            this.totalCost = this.totalCost * this.transfer;
         }
 
         render() {
@@ -185,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "vegy",
         'Меню "Фитнес"',
         'Меню "Фитнес" - это новый подход к приготовлению блюд: больше свежих овощей и фруктов. Продукт активных и здоровых людей. Это абсолютно новый продукт с оптимальной ценой и высоким качеством!',
-        229,
+        9,
         '.menu .container'
     ).render();
 
@@ -194,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "elite",
         'Меню “Премиум”',
         'В меню “Премиум” мы используем не только красивый дизайн упаковки, но и качественное исполнение блюд. Красная рыба, морепродукты, фрукты - ресторанное меню без похода в ресторан!',
-        550,
+        18,
         '.menu .container'
     ).render();
 
@@ -203,7 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "post",
         'Меню "Постное"',
         'Меню “Постное” - это тщательный подбор ингредиентов: полное отсутствие продуктов животного происхождения, молоко из миндаля, овса, кокоса или гречки, правильное количество белков за счет тофу и импортных вегетарианских стейков.',
-        430,
+        27,
         '.menu .container'
     ).render();
 });
